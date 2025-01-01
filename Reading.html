@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Reading.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+        <!-- <h1>Monthly Reading Calculator</h1> -->
+        <form action="">
+            <label for="">
+                Name Of Applicant
+                <input type="name" name="username" placeholder="Name Of Applicant">
+            </label>
+            <label for="">
+                Last Month Room Reading
+                <input type="number" name="pastmonth" placeholder="Last Month Room Reading">
+            </label>
+            
+            <label for="">
+                Present Month Room Reading    
+                <input type="number" name="presentmonth" placeholder="Present Month Room Reading">            
+            </label>
+            
+            <label for="">
+                Last Lobby Room Reading                
+                <input type="number" name="pastlobby" placeholder="Last Month Lobby Reading">
+            </label>
+
+            <label for="">
+                Present Lobby Room Reading
+                <input type="number" name="presentlobby" placeholder="Present Month Lobby Reading">
+            </label>
+
+            <label for="">
+                Rent Of The Room
+                <input type="Number" name="rent" placeholder="Rent Of The Room">
+            </label>
+            
+            <label for="">
+                Pending Balance Check Its <br>
+                <input type="checkbox" name="check" class="checkbox">
+            </label>
+
+            <label for="" id="balancebox">
+                Balance Of The Room 
+                <input type="number" name="balance" placeholder="Balance Of The Room">
+            </label>
+            
+            <button class="Calculate">Calculate</button>
+        </form>
+    <script src="Reading.js"></script>
+</body>
+</html>
