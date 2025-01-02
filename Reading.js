@@ -48,7 +48,7 @@ function makingBill(){
         <p>Your Present Month Lobby Reading is :- ${Room_Information.presentlobby}</p>
         <p>Your Lobby Bills Is :- ${lobby_bill}</p>
         <p>Your Room Rent Is :- ${room_rent}</p>
-        ${mykey in Room_Information ? `<p>Your Balance Is :- ${Room_Information.balance}<p/>`:''}
+        ${mykey in Room_Information ? `<p>Your Pendding Balance Is :- ${Room_Information.balance}<p/>`:''}
         <h2>Your Total Amount Is :- ${totalAmount}</h2>
         <button id="screenshotBtn">Take ScreenShot</button>
     </div>`;
