@@ -12,36 +12,41 @@
         <form action="">
             <label for="">
                 Name Of Applicant
-                <input type="name" name="username" placeholder="Name Of Applicant">
+                <input type="name" name="username" placeholder="Name Of Applicant" required>
             </label>
             <label for="">
                 Last Month Room Reading
-                <input type="number" name="pastmonth" placeholder="Last Month Room Reading">
+                <input type="number" name="pastmonth" placeholder="Last Month Room Reading" required>
             </label>
             
             <label for="">
                 Present Month Room Reading    
-                <input type="number" name="presentmonth" placeholder="Present Month Room Reading">            
+                <input type="number" name="presentmonth" placeholder="Present Month Room Reading" required>            
             </label>
             
             <label for="">
                 Last Lobby Room Reading                
-                <input type="number" name="pastlobby" placeholder="Last Month Lobby Reading">
+                <input type="number" name="pastlobby" placeholder="Last Month Lobby Reading" required>
             </label>
 
             <label for="">
                 Present Lobby Room Reading
-                <input type="number" name="presentlobby" placeholder="Present Month Lobby Reading">
+                <input type="number" name="presentlobby" placeholder="Present Month Lobby Reading" required>
             </label>
 
             <label for="">
                 Rent Of The Room
-                <input type="Number" name="rent" placeholder="Rent Of The Room">
+                <input type="Number" name="rent" placeholder="Rent Of The Room" required>
             </label>
             
             <label for="">
                 Pending Balance Check Its <br>
                 <input type="checkbox" name="check" class="checkbox">
+            </label>
+
+            <label for="" id="balancetypebox">
+                Applicant Owner Balance Check its <br>
+                <input type="checkbox" name="returnBalance" class="balanceType">
             </label>
 
             <label for="" id="balancebox">

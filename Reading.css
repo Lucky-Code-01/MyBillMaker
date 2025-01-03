@@ -60,6 +60,14 @@ input{
     width: 30px;
 }
 
+.balanceType{
+    width: 30px;
+}
+
+#balancetypebox{
+    display: none;
+}
+
 .Calculate{
     background-color: #acec09;
     color: black;
