@@ -1,5 +1,6 @@
 // make the logic for check box
 const checkbox = document.querySelector(".checkbox");
+const applicantBox = document.querySelector(".balanceType");
 const balancebox = document.querySelector("#balancebox");
 const balancetypebox = document.querySelector("#balancetypebox");
 let Room_Information;
@@ -25,18 +26,15 @@ function makingBill(){
     let date = presentDate.getDate();
     let year = presentDate.getFullYear();
     const finalDate = `${date}/${month+1}/${year}`;
-    let totalAmount = 0;
-    const mykey = 'check';
-    const returnBalance = "returnBalance";
     let room_bill = parseInt(Room_Information.presentmonth - Room_Information.pastmonth)*9;
     let lobby_bill = parseInt(Math.round(((Room_Information.presentlobby-Room_Information.pastlobby)/4)*9));
     let room_rent = parseInt(Room_Information.rent);
-    if(mykey in Room_Information && returnBalance in Room_Information){
+    if(checkbox.checked && applicantBox.checked){
         const room_balance = parseInt(Room_Information.balance);
         totalAmount = (room_rent + room_bill + lobby_bill) - room_balance;
     }
     
-    else if(mykey in Room_Information){
+    else if(checkbox.checked){
         const room_balance = parseInt(Room_Information.balance);
         totalAmount = (room_rent + room_bill + lobby_bill) + room_balance;
     }
@@ -57,7 +55,7 @@ function makingBill(){
         <p>Your Present Month Lobby Reading is :- ${Room_Information.presentlobby}</p>
         <p>Your Lobby Bills Is :- ${lobby_bill}</p>
         <p>Your Room Rent Is :- ${room_rent}</p>
-        ${mykey in Room_Information ? `<p>Your Pendding Balance Is :- ${Room_Information.balance}<p/>`:''}
+        ${checkbox.checked ? `<p>Your Pendding Balance Is :- ${Room_Information.balance}<p/>`:''}
         <h2>Your Total Amount Is :- ${totalAmount}</h2>
         <button id="screenshotBtn">Take ScreenShot</button>
     </div>`;
@@ -74,7 +72,6 @@ calculate.addEventListener('click',(event)=>{
     if(BillSlip){
         document.getElementById('screenshotBtn').addEventListener('click', function() { html2canvas(document.querySelector(".slip"), { onrendered: function(canvas) { var imgData = canvas.toDataURL(); var link = document.createElement('a'); link.href = imgData; link.download = 'screenshot.png'; link.click(); } }); });
     }
-    console.log(Room_Information);
 })
 
 
