@@ -48,14 +48,14 @@ function makingBill(){
         <h1>Your Monthly Room Bill</h1>
         <span class="date">${finalDate}</span>
         <span class="username">${Room_Information.username} Your Room Bill :- </span>
-        <p>Your Last Month Reading Is :- ${Room_Information.pastmonth}</p>
-        <p>Your Present Month Reading Is :- ${Room_Information.presentmonth}</p>
+        <p>Pichhle Mahine Ki Room Reading :- ${Room_Information.pastmonth}</p>
+        <p>Iss Mahine Ki Room Reading :- ${Room_Information.presentmonth}</p>
         <p>Your Room Bills Is :- ${room_bill}</p>
-        <p>Your Last Month Lobby Reading is :- ${Room_Information.pastlobby}</p>
-        <p>Your Present Month Lobby Reading is :- ${Room_Information.presentlobby}</p>
+        <p>Pichhle Mahine Ki Lobby Reeading :- ${Room_Information.pastlobby}</p>
+        <p>Iss Mahine Ki Lobby Reading :- ${Room_Information.presentlobby}</p>
         <p>Your Lobby Bills Is :- ${lobby_bill}</p>
         <p>Your Room Rent Is :- ${room_rent}</p>
-        ${checkbox.checked ? `<p>Your Pendding Balance Is :- ${Room_Information.balance}<p/>`:''}
+        ${checkbox.checked ? `<p>Apka Pendding Balance Is :- ${Room_Information.balance}<p/>`:''}
         <h2>Your Total Amount Is :- ${totalAmount}</h2>
         <button id="screenshotBtn">Take ScreenShot</button>
     </div>`;
